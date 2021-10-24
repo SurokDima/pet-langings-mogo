@@ -1,0 +1,28 @@
+$color-white: #fff;
+$color-orange: #fce38a;
+
+$animation-duration: .5s;
+
+.c-button {
+    color: $color-white;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: .875rem;
+    font-weight: 700;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    padding: 0.86em 2.15em;
+
+    border: 3px solid $color-white;
+
+    transition: background $animation-duration, color $animation-duration;
+
+    &:hover {
+        background: $color-white;
+
+        color: $color-orange;
+    }
+}
+
