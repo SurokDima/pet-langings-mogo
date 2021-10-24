@@ -15,5 +15,5 @@ gulp.task('sass-compile', function () {
 
 // Watcher for .scss files
 gulp.task('watch', function() {
-    gulp.watch('./assets/**/*.scss', gulp.series('sass-compile') );
+    gulp.watch('./src/**/*.scss', gulp.series('sass-compile') );
 });
