@@ -137,7 +137,7 @@ html {
 .c-header__logo {
   color: #fff;
   font-family: "Montserrat", sans-serif;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 700;
 }
 
@@ -323,5 +323,37 @@ html {
 }
 .c-about__item {
   width: 380px;
+}
+
+.c-stats {
+  width: 100%;
+  background: #95e1d3;
+}
+.c-stats__inner {
+  display: flex;
+}
+.c-stats__item {
+  flex: 1 1 0;
+  border-left: 1px solid #b5eae0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 90px 0;
+}
+.c-stats__item:last-child {
+  border: 1px solid #b5eae0;
+}
+.c-stats__number {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+.c-stats__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=main.css.map */

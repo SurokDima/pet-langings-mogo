@@ -1,0 +1,51 @@
+$color-light-green: #b5eae0;
+$color-green: #95e1d3;
+$color-white: #fff;
+
+.c-stats {
+
+    width: 100%;
+
+    background: $color-green;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__item {
+        flex: 1 1 0;
+
+        border-left: 1px solid $color-light-green;
+
+        display: flex;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        color: $color-white;
+
+        padding: 90px 0;
+
+        &:last-child {
+            border: 1px solid $color-light-green;
+        }
+    }
+
+    &__number {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 4.5rem;
+        font-weight: 700;
+    }
+
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: .875rem;
+        font-weight: 400;
+
+        text-transform: uppercase;
+    }
+
+
+
+}
