@@ -1,0 +1,42 @@
+$color-black: #333333;
+$color-grey: #999999;
+
+
+.c-service-item {
+    
+    position: relative;
+
+    &__image-container {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        z-index: 100;
+    }
+
+    &__message {
+        margin-left: 60px;
+    }
+
+
+    &__title {
+        color: $color-black;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: .875rem;
+        font-weight: 400;
+
+        text-transform: uppercase;
+    }
+
+    &__text {
+        color: $color-grey;
+        
+        font-family: 'Roboto', sans-serif;
+        font-size: .9375rem;
+        font-weight: 400;
+
+        margin-top: 1.4em;
+    }
+}
