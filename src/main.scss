@@ -19,6 +19,8 @@ html, body {
 // Default font
 html {
     font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     color: #999;
 }
 
@@ -54,3 +56,6 @@ html {
 @import "common/c-header/c-header";
 @import "common/c-nav/c-nav";
 @import "common/c-intro/c-intro";
+@import "common/c-section-message/c-section-message";
+@import "common/c-image-card/c-image-card";
+@import "common/c-about/c-about";
