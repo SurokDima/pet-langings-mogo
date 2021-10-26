@@ -111,22 +111,6 @@ html {
   margin-top: 2.81em;
 }
 
-.c-button {
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 0.86em 2.15em;
-  border: 3px solid #fff;
-  transition: background 0.5s, color 0.5s;
-}
-.c-button:hover {
-  background: #fff;
-  color: #fce38a;
-}
-
 .c-slider-info {
   width: 100%;
 }
@@ -227,6 +211,22 @@ html {
   display: none;
 }
 
+.o-button {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.86em 2.15em;
+  border: 3px solid #fff;
+  transition: background 0.5s, color 0.5s;
+}
+.o-button:hover {
+  background: #fff;
+  color: #fce38a;
+}
+
 .c-intro {
   height: 100vh;
   width: 100%;
@@ -299,6 +299,7 @@ html {
 }
 .c-image-card__image {
   display: block;
+  width: 100%;
 }
 .c-image-card__title {
   display: flex;
@@ -329,6 +330,9 @@ html {
 }
 .c-image-card:hover .c-image-card__title {
   opacity: 1;
+}
+.c-image-card--static:hover .c-image-card__inner {
+  transform: translate(0);
 }
 
 .c-stats {
@@ -506,12 +510,12 @@ html {
   display: block;
 }
 
-.c-scrollbar {
+.o-scrollbar {
   background: #f5f5f5;
   border-radius: 20px;
   width: 5px;
 }
-.c-scrollbar__tumb {
+.o-scrollbar__tumb {
   background: #95e1d3;
   border: 20px;
   height: 40%;
@@ -586,5 +590,15 @@ html {
   width: 60px;
   background: #f38181;
   margin-right: 10px;
+}
+
+.c-work__list {
+  display: flex;
+  width: 100%;
+}
+.c-work__column {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
 }
 /*# sourceMappingURL=main.css.map */
