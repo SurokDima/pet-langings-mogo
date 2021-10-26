@@ -316,7 +316,7 @@ html {
   text-transform: uppercase;
 }
 .c-image-card:hover .c-image-card__inner {
-  transform: translate(-10px, -10px);
+  transform: translate(-0.625rem, -0.625rem);
 }
 .c-image-card:hover .c-image-card__image-container {
   opacity: 0.1;
@@ -400,5 +400,30 @@ html {
   font-size: 0.9375rem;
   font-weight: 400;
   margin-top: 1.4em;
+}
+
+.c-devices {
+  background: url("/assets/images/devices/devices-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-top: 110px;
+}
+.c-devices__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.c-devices__devices {
+  display: flex;
+  justify-content: center;
+}
+.c-devices__images-container {
+  transform: translateX(-1.625rem);
+  position: relative;
+}
+.c-devices__iphone {
+  position: absolute;
+  bottom: -70px;
+  right: -140px;
 }
 /*# sourceMappingURL=main.css.map */

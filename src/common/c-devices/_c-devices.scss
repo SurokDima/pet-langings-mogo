@@ -1,0 +1,36 @@
+.c-devices {
+
+    background: url("/assets/images/devices/devices-bg.jpg");
+    background-size: cover;
+    background-position: center;
+
+    padding-top: 110px;
+
+    &__inner {
+        display: flex;
+
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+
+    &__devices {
+        display: flex;
+
+        justify-content: center;
+    }
+
+    &__images-container {
+        transform: translateX(-1.625rem);
+
+        position: relative;
+    }
+
+    &__iphone {
+        position: absolute;
+
+        bottom: -70px;
+        right: -140px;
+    }
+}
