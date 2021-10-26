@@ -1,0 +1,14 @@
+.c-section {
+    padding: 110px 0;
+
+    &__message {
+        margin-bottom: 50px;
+    }
+
+    &--devices {
+        padding-bottom: 0;
+    }
+}
+
+
+@import "common/c-section-message/c-section-message";

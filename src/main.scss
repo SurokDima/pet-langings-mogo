@@ -51,12 +51,13 @@ html {
 }
 
 
+@import "common/c-section/c-section";
 @import "common/c-button/c-button";
 @import "common/c-slider-info/c-slider-info";
 @import "common/c-header/c-header";
 @import "common/c-intro/c-intro";
-@import "common/c-section-message/c-section-message";
 @import "common/c-about/c-about";
 @import "common/c-stats/c-stats";
 @import "common/c-service/c-service";
 @import "common/c-devices/c-devices";
+@import "common/c-service-info/c-service-info";

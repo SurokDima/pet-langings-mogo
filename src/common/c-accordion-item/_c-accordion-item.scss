@@ -1,0 +1,112 @@
+$color-light-grey: #e5e5e5;
+$color-black: #333333;
+$color-grey: #d0d0d0;
+$color-dark-grey: #999999;
+
+.c-accordion-item {
+
+    border: 1px solid $color-light-grey;
+
+    &__header {
+
+        padding: 1.5625rem 1.25rem 1.5625rem .94rem;
+
+        position: relative;
+
+    }
+
+    &__icon-container {
+        position: absolute;
+
+        top: 50%;
+        left: .94rem;
+
+        z-index: 100;
+
+        transform: translateY(-50%);
+    }
+
+    &__title {
+        color: $color-black;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: .875rem;
+        font-weight: 700;
+
+        text-transform: uppercase;
+
+        margin-left: 45px;
+
+        display: flex;
+
+        align-items: center;
+
+
+        height: 100%;
+    }
+
+    &__arrow {
+        position: absolute;
+
+        top: 50%;
+        right: 1.25rem;
+
+        z-index: 100;
+
+        transform: translateY(-50%);
+
+        cursor: pointer;
+
+        color: $color-grey;
+
+        font-size: 1.125rem;
+    }
+
+    &__body {
+        padding: 1.25rem 3.4375rem 1.25rem 1.25rem;
+
+        position: relative;
+
+        display: none;
+    }
+
+    &__text {
+        color: $color-dark-grey;
+
+        font-family: 'Roboto', sans-serif;
+        font-style: italic;
+        font-weight: 300;
+        font-size: .9375rem;
+
+        line-height: 1.4;
+    }
+
+    &__scrollbar {
+        height: 80%;
+
+        position: absolute;
+        
+        top: 50%;
+        right: 1.5625rem;
+
+        transform: translateY(-50%);
+
+        z-index: 100;
+    }
+
+    &--is-active {
+        .c-accordion-item__header {
+            border-bottom: 1px solid $color-light-grey;
+        }
+
+        .c-accordion-item__arrow {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .c-accordion-item__body {
+            display: block;
+        }
+    }
+}
+
+@import "common/c-scrollbar/c-scrollbar";

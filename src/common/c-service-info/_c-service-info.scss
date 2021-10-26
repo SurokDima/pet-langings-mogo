@@ -1,0 +1,21 @@
+
+.c-service-info {
+
+    &__container {
+        display: flex;
+
+        justify-content: space-between;
+    }
+
+    &__accordion-container {
+        width: 50%;
+    }
+
+    &__accordion-item {
+        width: 100%;
+
+        margin-bottom: .9375rem;
+    }
+}
+
+@import "common/c-accordion-item/c-accordion-item";

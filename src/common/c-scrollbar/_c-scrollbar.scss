@@ -1,0 +1,19 @@
+$color-grey: #f5f5f5;
+$color-green: #95e1d3; 
+
+$boder-radius: 20px;
+
+.c-scrollbar {
+
+    background: $color-grey;
+    border-radius: $boder-radius;
+    
+    width: 5px;
+
+    &__tumb {
+        background: $color-green;
+        border: $boder-radius;
+
+        height: 40%;
+    }
+}
