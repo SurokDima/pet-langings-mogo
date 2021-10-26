@@ -1,0 +1,124 @@
+$color-green: #95e1d3;
+$color-black: #333333;
+$color-grey: #999999;
+$color-red: #f38181;
+$color-light-grey: #cccccc;
+
+
+$animation-duration: .3s;
+
+.c-reviews {
+    
+    
+    &__button {
+        color: $color-light-grey;
+
+        font-size: 2rem;
+
+        position: absolute;
+
+        top: 50%;
+
+        z-index: 100;
+
+        transform: translateY(-50%);
+
+        cursor: pointer;
+        
+        transition: color $animation-duration, transfrom $animation-duration;
+
+        &:hover {
+            color: $color-red;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+
+        &--prev {
+            left: 0;
+        }
+
+        &--next {
+            right: 0;
+        }
+    }
+
+    &__inner {
+        display: flex;
+
+        justify-content: space-between;
+
+        padding: 0 110px;
+
+        position: relative;
+    }
+
+    &__item {
+        display: flex;
+
+        justify-content: space-between;
+
+        position: relative;
+
+        padding-left: 250px;
+    }
+
+    &__avatar-container {
+
+        position: absolute;
+
+        top: 50%;
+        left: 0;
+
+        z-index: 100;
+
+        transform: translateY(-50%);
+    }
+
+    &__avatar {
+        border-radius: 50%;
+        border: 3px solid $color-green;
+    }
+
+    &__item-content {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    &__item-text {
+        color: $color-grey;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    &__author {
+
+        color: $color-black;
+
+        font-family: 'Kaushan Script', cursive;
+        font-size: 1.5rem;
+        font-weight: 400;
+
+        margin-top: 1.875rem;
+
+        &:before {
+            content: '';
+
+            display: inline-block;
+
+            vertical-align: center;
+            
+            height: 3px;
+            width: 60px;
+
+            background: $color-red;
+
+            margin-right: 10px;
+
+        }
+    }
+
+}

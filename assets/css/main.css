@@ -516,4 +516,75 @@ html {
   border: 20px;
   height: 40%;
 }
+
+.c-reviews__button {
+  color: #cccccc;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: color 0.3s, transfrom 0.3s;
+}
+.c-reviews__button:hover {
+  color: #f38181;
+  transform: translateY(-50%) scale(1.1);
+}
+.c-reviews__button--prev {
+  left: 0;
+}
+.c-reviews__button--next {
+  right: 0;
+}
+.c-reviews__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 110px;
+  position: relative;
+}
+.c-reviews__item {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-left: 250px;
+}
+.c-reviews__avatar-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 100;
+  transform: translateY(-50%);
+}
+.c-reviews__avatar {
+  border-radius: 50%;
+  border: 3px solid #95e1d3;
+}
+.c-reviews__item-content {
+  display: flex;
+  flex-direction: column;
+}
+.c-reviews__item-text {
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+}
+.c-reviews__author {
+  color: #333333;
+  font-family: "Kaushan Script", cursive;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 1.875rem;
+}
+.c-reviews__author:before {
+  content: "";
+  display: inline-block;
+  vertical-align: center;
+  height: 3px;
+  width: 60px;
+  background: #f38181;
+  margin-right: 10px;
+}
 /*# sourceMappingURL=main.css.map */
