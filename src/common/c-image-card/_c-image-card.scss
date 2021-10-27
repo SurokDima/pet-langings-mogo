@@ -1,8 +1,11 @@
 $color-white: #fff;
 $color-green: #95e1d3;
+$color-red: #f38181;
+$color-yellow: #fce38a;
+$color-light-red: #f9bd87;
 
 $animation-duration: .2s;
-
+$animation-duration-social: .5s;
 .c-image-card {
     
     background: $color-green;
@@ -54,6 +57,39 @@ $animation-duration: .2s;
         font-weight: 700;
 
         text-transform: uppercase;
+    }
+
+    &__socials {
+        display: flex;
+    }
+
+    &__social-item {
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        color: $color-red;
+        background: $color-yellow;
+
+        width: 60px;
+        height: 60px;
+
+        border-right: 1px solid $color-light-red;
+
+        font-size: 1.5rem;
+
+        transition: color $animation-duration-social, background $animation-duration-social;
+
+        &:last-child {
+            border-right: none;
+        }
+
+        &:hover {
+            color: $color-white;
+            background: $color-red;
+        }
     }
 
     &:hover {

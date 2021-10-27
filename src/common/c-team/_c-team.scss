@@ -1,0 +1,14 @@
+.c-team {
+
+    &__list {
+        display: flex;
+
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 30%;
+    }
+}
+
+@import "common/c-image-card/c-image-card";
