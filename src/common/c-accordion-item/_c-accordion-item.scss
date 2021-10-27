@@ -56,10 +56,6 @@ $color-dark-grey: #999999;
         transform: translateY(-50%);
 
         cursor: pointer;
-
-        color: $color-grey;
-
-        font-size: 1.125rem;
     }
 
     &__body {
@@ -110,3 +106,4 @@ $color-dark-grey: #999999;
 }
 
 @import "common/o-scrollbar/o-scrollbar";
+@import "common/o-arrow/o-arrow";

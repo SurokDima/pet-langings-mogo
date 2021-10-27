@@ -1,0 +1,68 @@
+$color-red: #f38181;
+$color-light-grey: #cccccc;
+
+$animation-duration: .3s;
+
+.o-arrow {
+
+    &__icon {
+        color: $color-light-grey;
+
+        font-size: 1.125em;
+
+        transition: color $animation-duration, transfrom $animation-duration;
+
+        &:hover {
+            color: $color-red;
+            transform: scale(1.1);
+        }
+
+    }
+
+    &--large {
+        & .o-arrow__icon {
+            font-size: 2em;
+        }
+    }
+
+    &--right {
+        & .o-arrow__icon {
+            transform: rotate(0);
+
+            &:hover {
+                transform: scale(1.1) rotate(0);
+            }    
+        }
+    }
+
+    &--left {
+        & .o-arrow__icon {
+            transform: rotate(180deg);
+
+            &:hover {
+                transform: scale(1.1) rotate(180deg);
+            }
+        }
+    }
+
+    &--down {
+        & .o-arrow__icon {
+            transform: rotate(90deg);
+
+            &:hover {
+                transform: scale(1.1) rotate(90deg);
+            }
+        }
+    }
+
+    &--up {
+        & .o-arrow__icon {
+            transform: rotate(-90deg);
+
+            &:hover {
+                transform: scale(1.1) rotate(-90deg);
+            }
+        }
+    }
+
+}

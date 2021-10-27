@@ -75,7 +75,7 @@ html {
 .c-section__message {
   margin-bottom: 50px;
 }
-.c-section--devices {
+.c-section--no-botton-padding {
   padding-bottom: 0;
 }
 
@@ -476,8 +476,6 @@ html {
   z-index: 100;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #d0d0d0;
-  font-size: 1.125rem;
 }
 .c-accordion-item__body {
   padding: 1.25rem 3.4375rem 1.25rem 1.25rem;
@@ -521,19 +519,49 @@ html {
   height: 40%;
 }
 
-.c-reviews__button {
+.o-arrow__icon {
   color: #cccccc;
-  font-size: 2rem;
+  font-size: 1.125em;
+  transition: color 0.3s, transfrom 0.3s;
+}
+.o-arrow__icon:hover {
+  color: #f38181;
+  transform: scale(1.1);
+}
+.o-arrow--large .o-arrow__icon {
+  font-size: 2em;
+}
+.o-arrow--right .o-arrow__icon {
+  transform: rotate(0);
+}
+.o-arrow--right .o-arrow__icon:hover {
+  transform: scale(1.1) rotate(0);
+}
+.o-arrow--left .o-arrow__icon {
+  transform: rotate(180deg);
+}
+.o-arrow--left .o-arrow__icon:hover {
+  transform: scale(1.1) rotate(180deg);
+}
+.o-arrow--down .o-arrow__icon {
+  transform: rotate(90deg);
+}
+.o-arrow--down .o-arrow__icon:hover {
+  transform: scale(1.1) rotate(90deg);
+}
+.o-arrow--up .o-arrow__icon {
+  transform: rotate(-90deg);
+}
+.o-arrow--up .o-arrow__icon:hover {
+  transform: scale(1.1) rotate(-90deg);
+}
+
+.c-reviews__button {
   position: absolute;
   top: 50%;
   z-index: 100;
   transform: translateY(-50%);
   cursor: pointer;
-  transition: color 0.3s, transfrom 0.3s;
-}
-.c-reviews__button:hover {
-  color: #f38181;
-  transform: translateY(-50%) scale(1.1);
 }
 .c-reviews__button--prev {
   left: 0;
@@ -590,6 +618,43 @@ html {
   width: 60px;
   background: #f38181;
   margin-right: 10px;
+}
+
+.o-arrow__icon {
+  color: #cccccc;
+  font-size: 1.125em;
+  transition: color 0.3s, transfrom 0.3s;
+}
+.o-arrow__icon:hover {
+  color: #f38181;
+  transform: scale(1.1);
+}
+.o-arrow--large .o-arrow__icon {
+  font-size: 2em;
+}
+.o-arrow--right .o-arrow__icon {
+  transform: rotate(0);
+}
+.o-arrow--right .o-arrow__icon:hover {
+  transform: scale(1.1) rotate(0);
+}
+.o-arrow--left .o-arrow__icon {
+  transform: rotate(180deg);
+}
+.o-arrow--left .o-arrow__icon:hover {
+  transform: scale(1.1) rotate(180deg);
+}
+.o-arrow--down .o-arrow__icon {
+  transform: rotate(90deg);
+}
+.o-arrow--down .o-arrow__icon:hover {
+  transform: scale(1.1) rotate(90deg);
+}
+.o-arrow--up .o-arrow__icon {
+  transform: rotate(-90deg);
+}
+.o-arrow--up .o-arrow__icon:hover {
+  transform: scale(1.1) rotate(-90deg);
 }
 
 .c-work__list {

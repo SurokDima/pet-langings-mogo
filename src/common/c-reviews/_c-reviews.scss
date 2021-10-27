@@ -11,9 +11,6 @@ $animation-duration: .3s;
     
     
     &__button {
-        color: $color-light-grey;
-
-        font-size: 2rem;
 
         position: absolute;
 
@@ -25,14 +22,6 @@ $animation-duration: .3s;
 
         cursor: pointer;
         
-        transition: color $animation-duration, transfrom $animation-duration;
-
-        &:hover {
-            color: $color-red;
-            transform: translateY(-50%) scale(1.1);
-        }
-
-
         &--prev {
             left: 0;
         }
@@ -122,3 +111,5 @@ $animation-duration: .3s;
     }
 
 }
+
+@import "common/o-arrow/o-arrow";
