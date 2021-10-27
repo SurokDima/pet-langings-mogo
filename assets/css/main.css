@@ -826,4 +826,20 @@ html {
 .c-image-card--static:hover .c-image-card__inner {
   transform: translate(0);
 }
+
+.c-logos {
+  background: #f8f8f8;
+  padding: 4.375rem 0;
+}
+.c-logos__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.c-logos__item {
+  margin-right: 2.5rem;
+}
+.c-logos__item-image {
+  width: 100%;
+  height: auto;
+}
 /*# sourceMappingURL=main.css.map */

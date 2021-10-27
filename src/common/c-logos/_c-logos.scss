@@ -1,0 +1,23 @@
+$color-grey: #f8f8f8;
+
+.c-logos {
+
+    background: $color-grey;
+
+    padding: 4.375rem 0;
+
+    &__inner {
+        display: flex;
+
+        justify-content: space-between;
+    }
+    
+    &__item {
+        margin-right: 2.5rem;
+    }
+
+    &__item-image {
+        width: 100%;
+        height: auto;
+    }
+}
