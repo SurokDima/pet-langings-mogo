@@ -109,6 +109,7 @@ html {
   font-weight: 400;
   color: #999;
   margin-top: 2.81em;
+  line-height: 1.4;
 }
 
 .c-slider-info {
@@ -406,6 +407,7 @@ html {
   font-size: 0.9375rem;
   font-weight: 400;
   margin-top: 1.4em;
+  line-height: 1.4;
 }
 
 .c-devices {
@@ -602,6 +604,7 @@ html {
   font-size: 1.5rem;
   font-weight: 300;
   font-style: italic;
+  line-height: 1.4;
 }
 .c-reviews__author {
   color: #333333;
@@ -665,5 +668,61 @@ html {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
+}
+
+.c-clients {
+  background: url("/assets/images/clients/clients-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.c-clients__list {
+  display: grid;
+  grid-row-gap: 70px;
+}
+.c-clients__row {
+  display: flex;
+  justify-content: space-between;
+}
+.c-clients__item {
+  position: relative;
+  padding-left: 140px;
+  width: 45%;
+}
+.c-clients__photo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.c-clients__info:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60px;
+  background: #f38181;
+  margin-top: 1.25rem;
+}
+.c-clients__name {
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.c-clients__job {
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 1.25rem;
+}
+.c-clients__comment {
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  margin-top: 1.5625rem;
+  line-height: 1.4;
 }
 /*# sourceMappingURL=main.css.map */

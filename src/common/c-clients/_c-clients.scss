@@ -1,0 +1,86 @@
+$color-red: #f38181;
+$color-grey: #999999;
+$color-black: #333333;
+
+.c-clients {
+
+    background: url("/assets/images/clients/clients-bg.jpg");
+    background-size: cover;
+    background-position: center;
+
+    &__list {
+        display:  grid;
+
+        grid-row-gap: 70px;
+    }
+
+    &__row {
+        display: flex;
+
+        justify-content: space-between;
+    }
+
+    &__item {
+        position: relative;
+
+        padding-left: 140px;
+
+        width: 45%;
+    }
+
+    &__photo-container {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        
+        z-index: 100;
+    }
+
+
+    &__info:after {
+        content: '';
+
+        display: block;
+
+        height: 3px;
+        width: 60px;
+
+        background: $color-red;
+
+        margin-top: 1.25rem;
+    }
+
+    &__name {
+        color: $color-black;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: .875rem;
+        font-weight: 700;
+
+        text-transform: uppercase;
+    }
+
+    &__job {
+        color: $color-black;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: .9375rem;
+        font-weight: 300;
+        font-style: italic;
+
+        margin-top: 1.25rem;
+    }
+
+    &__comment {
+        color: $color-grey;
+
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: .9375rem;
+
+        margin-top: 1.5625rem;
+
+        line-height: 1.4;
+    }
+}
