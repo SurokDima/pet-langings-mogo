@@ -456,6 +456,9 @@ html {
   right: -140px;
 }
 
+.c-service-info__image {
+  width: 100%;
+}
 .c-service-info__container {
   display: flex;
   justify-content: space-between;
