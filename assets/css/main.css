@@ -237,7 +237,7 @@ html {
   align-items: center;
   position: relative;
   z-index: 1;
-  background: url("/assets/images/intro/intro-background.jpg");
+  background: url("../images/intro/intro-background.jpg");
   background-size: cover;
 }
 .c-intro__message {
@@ -433,7 +433,7 @@ html {
 }
 
 .c-devices {
-  background: url("/assets/images/devices/devices-bg.jpg");
+  background: url("../images/devices/devices-bg.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -696,7 +696,7 @@ html {
 }
 
 .c-clients {
-  background: url("/assets/images/clients/clients-bg.jpg");
+  background: url("../images/clients/clients-bg.jpg");
   background-size: cover;
   background-position: center;
 }
