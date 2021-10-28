@@ -1,0 +1,56 @@
+$color-red: #f38181;
+
+.c-map {
+    padding: 50px 0;
+
+    background: url("../images/map/map-bg.png");
+    block-size: cover;
+    background-position: center;
+
+    &__title {
+        text-align: center;
+
+        color: $color-red;
+        
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        &:after {
+            content: '';
+
+            display: block;
+
+            width: 60px;
+            height: 3px;
+
+            background: $color-red;
+
+            margin: 1.25rem auto 0;
+        }
+    }
+
+    &__icon {
+        font-size: 1.75rem;
+    }
+
+    &__link {
+        color: $color-red;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+
+        text-decoration: none;
+        text-transform: uppercase;
+
+        margin-top: .625rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
