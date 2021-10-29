@@ -1,0 +1,87 @@
+$color-black: #333;
+
+.c-footer-blogs {
+
+    display: flex;
+
+
+    flex-direction: column;
+    justify-content: flex-start;
+
+
+    &__title {
+        color: #333;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: .875rem;
+        font-weight: 700;
+
+        text-transform: uppercase;
+    }
+
+    &__list {
+        display: flex;
+
+        flex-direction: column;
+
+        margin-top: 2.5rem;
+    }
+
+    &__item {
+        display: flex;
+
+        justify-content: space-between;
+
+        margin-bottom: 1.875rem;
+    }
+    
+    &__image-container {
+        margin-right: 1.25rem;
+        
+        width: 80%;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+    
+    &__content {
+        display: flex;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+
+    &__item-title {
+        color: $color-black;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: .75rem;
+        font-weight: 700;
+        
+        text-transform: uppercase;
+
+        cursor: pointer;
+
+        line-height: 1.4;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+    &__date {
+        margin-top: .625rem;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: .8125rem;
+        font-weight: 300;
+        font-style: italic;
+
+        line-height: 1.4;
+    }
+}

@@ -889,6 +889,7 @@ html {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
+  cursor: pointer;
   line-height: 1.4;
 }
 .c-blog__title:hover {
@@ -958,6 +959,225 @@ html {
   margin-top: 0.625rem;
 }
 .c-map__link:hover {
+  text-decoration: underline;
+}
+
+.c-footer {
+  background: #f8f8f8;
+  padding: 80px 0;
+}
+.c-footer__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.c-footer__info {
+  width: 36%;
+}
+.c-footer__info-title {
+  color: #cccccc;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.875rem;
+  font-weight: 700;
+}
+.c-footer__info-text {
+  margin-top: 2.5rem;
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.c-footer__followers {
+  margin-top: 3.125rem;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.c-footer__followers-number {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.c-footer__socials {
+  display: flex;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 0.625rem;
+}
+.c-footer__socials-list {
+  display: flex;
+}
+.c-footer__socials-title {
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-right: 1.25rem;
+}
+.c-footer__socials-item {
+  color: #95e1d3;
+  font-size: 1.125rem;
+  margin-right: 15px;
+  transition: transfrom 0.3s, color 0.3s;
+}
+.c-footer__socials-item:hover {
+  color: #f38181;
+  transform: scale(1.1);
+}
+.c-footer__subscribe {
+  width: 80%;
+  display: flex;
+  margin-top: 2.5rem;
+}
+.c-footer__email-input {
+  min-width: 80%;
+  color: #333;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  font-style: italic;
+  background: #fff;
+  padding: 0.9375rem 0.9375rem;
+  border: 1px solid #f8f8f8;
+  transition: box-shadow 0.3s;
+}
+.c-footer__email-input:focus {
+  border: 2px solid #f38181;
+}
+.c-footer__email-input::placeholder {
+  color: #cccccc;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  font-style: italic;
+}
+.c-footer__email-submit {
+  outline: none;
+  box-shadow: none;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.9375rem 2.1875rem;
+  border: 2px solid #95e1d3;
+  background: #95e1d3;
+  transition: color 0.3s, background 0.3s, border 0.3s, box-shadow 0.3s;
+}
+.c-footer__email-submit:hover {
+  border: 2px solid #46cbb2;
+  background: #46cbb2;
+}
+.c-footer__email-submit:active {
+  color: #95e1d3;
+  background: #f8f8f8;
+}
+.c-footer__email-submit:focus {
+  border: 2px solid #f38181;
+}
+.c-footer__blogs {
+  width: 27%;
+}
+.c-footer__instagram {
+  width: 22%;
+}
+
+.c-footer-blogs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.c-footer-blogs__title {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.c-footer-blogs__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+.c-footer-blogs__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.875rem;
+}
+.c-footer-blogs__image-container {
+  margin-right: 1.25rem;
+  width: 80%;
+}
+.c-footer-blogs__image {
+  width: 100%;
+  height: auto;
+}
+.c-footer-blogs__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.c-footer-blogs__item-title {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 1.4;
+}
+.c-footer-blogs__item-title:hover {
+  text-decoration: underline;
+}
+.c-footer-blogs__date {
+  margin-top: 0.625rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.c-footer-instagram {
+  display: flex;
+  flex-direction: column;
+}
+.c-footer-instagram__title {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.c-footer-instagram__content {
+  margin-top: 2.5rem;
+}
+.c-footer-instagram__list {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+}
+.c-footer-instagram__item-image {
+  width: 100%;
+  height: 100%;
+}
+.c-footer-instagram__more {
+  color: #333;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  font-style: italic;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 1.25rem;
+}
+.c-footer-instagram__more:hover {
   text-decoration: underline;
 }
 /*# sourceMappingURL=main.css.map */
