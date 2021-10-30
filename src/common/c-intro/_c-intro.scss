@@ -36,6 +36,7 @@ $color-white: #fff;
 
         text-align: center;
 
+        width: 100%;
         max-width: 850px;
 
         &:after {
@@ -59,7 +60,10 @@ $color-white: #fff;
         font-size: 4.5rem;
         font-weight: 400;
 
+        width: 100%;
         max-width: 520px;
+
+        text-align: center;
     }
 
     &__button {
@@ -76,10 +80,26 @@ $color-white: #fff;
     @media (max-width: 769px) {
         &__title {
             font-size: 7rem;
+
+            &:after {
+                margin-top: 40px;
+            }
         }
 
         &__suptitle {
             font-size: 3rem;
         }
     }
+
+    @media (max-width: 480px) {
+        &__title {
+            font-size: 4rem;
+        }
+
+        &__suptitle {
+            font-size: 2rem;
+        }
+    }
+
+
 }

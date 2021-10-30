@@ -245,6 +245,7 @@ html {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  width: 100%;
   max-width: 850px;
 }
 .c-intro__title:after {
@@ -260,7 +261,9 @@ html {
   font-family: "Kaushan Script", cursive;
   font-size: 4.5rem;
   font-weight: 400;
+  width: 100%;
   max-width: 520px;
+  text-align: center;
 }
 .c-intro__button {
   margin-top: 55px;
@@ -274,8 +277,19 @@ html {
   .c-intro__title {
     font-size: 7rem;
   }
+  .c-intro__title:after {
+    margin-top: 40px;
+  }
   .c-intro__suptitle {
     font-size: 3rem;
+  }
+}
+@media (max-width: 480px) {
+  .c-intro__title {
+    font-size: 4rem;
+  }
+  .c-intro__suptitle {
+    font-size: 2rem;
   }
 }
 
