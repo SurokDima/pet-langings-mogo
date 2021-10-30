@@ -10,14 +10,34 @@ $color-grey: #f8f8f8;
         display: flex;
 
         justify-content: space-between;
+        align-items: center;
+
+        margin: 0 -15px;
     }
     
     &__item {
-        margin-right: 2.5rem;
+        margin-right: 2rem;
     }
 
     &__item-image {
         width: 100%;
         height: auto;
     }
+
+    @media(max-width: 601px) {
+        &__inner {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__item {
+            width: min(50%, 150px);
+
+            padding: 0 max(15px, 5vw);
+
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+
 }

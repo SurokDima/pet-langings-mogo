@@ -1,8 +1,16 @@
 
 .c-service-info {
 
+    &__image-container {
+        width: 50%;
+        padding: 0 15px;
+    }
+
     &__image {
-        width: 100%;
+        max-width: 100%;
+        height: auto;
+
+        display: block;
     }
 
     &__container {
@@ -13,12 +21,25 @@
 
     &__accordion-container {
         width: 50%;
+
+        padding: 0 15px;
     }
 
     &__accordion-item {
         width: 100%;
 
         margin-bottom: .9375rem;
+    }
+
+    @media (max-width: 769px) {
+
+        &__image-container {
+            display: none;
+        }
+
+        &__accordion-container {
+            width: 100%;
+        }
     }
 }
 

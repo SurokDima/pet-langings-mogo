@@ -21,6 +21,78 @@ $color-light-grey: #e5e5e5;
         }
     }
 
+    &__item {
+        max-width: 30%;
+    }
+
+    @media (max-width: 769px) {
+
+        &__inner {
+            display: flex;
+
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__list {
+            max-width: 100%;
+
+            display: flex;
+            flex-direction: row;
+            
+            justify-content: space-between;
+        }
+
+        &__item {
+            max-width: 100%;
+
+            margin-bottom: 45px;
+        }
+
+        &__row {
+            flex-direction: column;
+
+            width: 45%;
+            align-items: center;
+
+            border: none;
+            padding: 0;
+        }
+    }
+    
+    @media (max-width: 601px) {
+
+        &__inner {
+            display: flex;
+
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__list {
+            width: 100%;
+            max-width: 400px;
+
+            flex-direction: column;
+        }
+
+        &__item {
+            max-width: 100%;
+
+            margin-bottom: 45px;
+        }
+
+        &__row {
+            flex-direction: column;
+
+            width: 100%;
+            align-items: center;
+
+            border: none;
+            padding: 0;
+        }
+    }
+
 }
 
 @import "common/c-service-item/c-service-item";

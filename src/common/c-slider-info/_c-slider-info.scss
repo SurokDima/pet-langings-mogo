@@ -57,6 +57,12 @@ $color-red: #f38181;
         font-size: 1.5rem;
         font-weight: 700;
     }
+
+    @media (max-width: 829px) {
+        &__name {
+            display: none;
+        }
+    }
     
 
 }

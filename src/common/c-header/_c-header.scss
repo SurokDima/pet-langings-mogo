@@ -11,6 +11,7 @@ $color-white: #fff;
 
         justify-content: space-between;
         align-items: center;
+
     }
 
     &__logo {
@@ -19,6 +20,12 @@ $color-white: #fff;
         font-family: 'Montserrat', sans-serif;
         font-size: 1.875rem;
         font-weight: 700;
+    }
+
+    @media (max-width: 769px) {
+        &__nav {
+            display: none;
+        }
     }
 }
 

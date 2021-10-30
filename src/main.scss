@@ -22,6 +22,22 @@ html {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: #999;
+
+    @media (max-width: 1201px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 993px) {
+        font-size: 13px;
+    }
+
+    @media (max-width: 769px) {
+        font-size: 12px;
+    }
+
+    @media (max-width: 601px) {
+        font-size: 11px;
+    }
 }
 
 // Wrapper 
@@ -42,12 +58,18 @@ html {
 
 // Container
 .l-container {
-    width: 100%;
     max-width: 1200px;
+
+    padding: 0 30px;
 
     display: block;
 
     margin: 0 auto;
+
+    @media (max-width: 1201px) {
+        max-width: 100%;
+    }
+
 }
 
 // Import compoonents

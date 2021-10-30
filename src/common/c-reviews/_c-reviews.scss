@@ -39,6 +39,8 @@ $animation-duration: .3s;
         padding: 0 110px;
 
         position: relative;
+
+        max-width: 100%;
     }
 
     &__item {
@@ -72,6 +74,7 @@ $animation-duration: .3s;
         display: flex;
 
         flex-direction: column;
+        
     }
 
     &__item-text {
@@ -112,6 +115,55 @@ $animation-duration: .3s;
         }
     }
 
+    @media (max-width: 993px) {
+
+        &__inner {
+            padding: 0 50px;
+        }
+
+        &__item {
+            display: flex;
+
+            flex-direction: column;
+
+            padding: 0;
+        }
+
+        &__item-content {
+            margin-top: 1.25rem;
+        }
+
+        &__avatar-container {
+            position: static;
+            
+            transform: translate(0);
+
+            display: flex;
+
+            justify-content: center;
+        }
+
+        &__avatar {
+            width: 200px;
+        }
+    }
+
+
+    @media (max-width:601px) {
+        
+        
+        &__inner {
+            padding: 0;
+        }
+
+        &__button {
+            top: 25%;
+        }
+
+        &__avatar {
+            width: 150px;
+        }
+    }
 }
 
 @import "common/o-arrow/o-arrow";

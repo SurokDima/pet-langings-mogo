@@ -9,6 +9,23 @@
     &__item {
         width: 30%;
     }
+
+    @media (max-width: 769px) {
+        &__list {
+            flex-direction: column;
+
+            justify-content: flex-start;
+            align-items: center;    
+        }
+
+        &__item {
+            max-width: 410px;
+            width: 100%;
+
+            margin-bottom: 60px;
+        }
+    }
+
 }
 
 @import "common/c-image-card/c-image-card";

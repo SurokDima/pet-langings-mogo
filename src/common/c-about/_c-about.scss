@@ -4,11 +4,26 @@
         display: flex;
 
         justify-content: space-between;
-
+        
     }
 
     &__item {
-        width: 380px;
+        width: 31%;
+    }
+
+    @media (max-width: 769px) {
+        &__list {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__item {
+            width: 100%;
+            max-width: 380px;
+
+            margin-bottom: 60px;
+        }
     }
 
 }

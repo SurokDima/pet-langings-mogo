@@ -72,4 +72,14 @@ $color-white: #fff;
         bottom: 30px;
         left: 0;
     }
+
+    @media (max-width: 769px) {
+        &__title {
+            font-size: 7rem;
+        }
+
+        &__suptitle {
+            font-size: 3rem;
+        }
+    }
 }

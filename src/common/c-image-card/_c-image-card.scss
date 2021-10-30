@@ -116,4 +116,22 @@ $animation-duration-social: .5s;
             }
         }
     }
+
+
+    @media (max-width: 993px) {
+        &__social-item {
+            width: 45px;
+            height: 45px;
+
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 769px) {
+        &__social-item {
+            font-size: 1.5rem;
+        }
+    }
+
+
 }

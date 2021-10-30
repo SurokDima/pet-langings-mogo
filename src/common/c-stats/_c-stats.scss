@@ -46,6 +46,42 @@ $color-white: #fff;
         text-transform: uppercase;
     }
 
+    @media (max-width: 769px) {
+        &__inner {
+            flex-wrap: wrap;
+        }
 
+        &__item {
+            border: none;
+
+            min-width: 200px;
+
+            &:last-child {
+                border: none;
+            }
+        }
+
+    }
+
+    @media (max-width: 601px) {
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__item {
+            border: 0;
+
+            padding: 45px 0;
+
+            border-top: 1px solid $color-light-green ;
+
+            &:last-child {
+                border: 0;
+                border-top: 1px solid $color-light-green;
+                border-bottom:  1px solid $color-light-green;
+            }
+        }
+
+    }
 
 }

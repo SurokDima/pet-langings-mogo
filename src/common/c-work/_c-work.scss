@@ -14,4 +14,26 @@
         flex-direction: column;
     }
 
+    @media (max-width: 769px) {
+        &__list {
+
+            flex-wrap: wrap;
+        }
+        
+        &__column {
+            flex: none;
+
+            width: 50%;
+        }
+    }
+
+    @media (max-width: 601px) {
+        &__list {
+            flex-direction: column;
+        }
+
+        &__column {
+            width:  100%;
+        }
+    }
 }
