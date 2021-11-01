@@ -39,6 +39,23 @@ for (const link of scrollLinks) {
     });
 }
 
+function animate({timing, draw, duration}) {
+    const start = performance.now();
+
+    requestAnimationFrame(function animateFrame(time) {
+        const timePassed = time - start;
+        const timeFraction = timePassed / duration;
+
+        const progress = timing(timeFraction);
+        draw(progress);
+
+        if(timeFraction < 1) {
+            requestAnimationFrame(animateFrame);
+        }
+    });
+}
+
+
 const header = document.querySelector('.js-header');
 
 
@@ -57,3 +74,6 @@ document.addEventListener('scroll', function documentScrollHandler(event) {
     else header.classList.remove('c-header--fixed');
 
 });
+
+
+
