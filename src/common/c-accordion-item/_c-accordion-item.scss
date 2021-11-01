@@ -3,6 +3,9 @@ $color-black: #333333;
 $color-grey: #d0d0d0;
 $color-dark-grey: #999999;
 
+$boder-radius: 20px;
+$scroll-bar-background: #f5f5f5;
+
 .c-accordion-item {
 
     border: 1px solid $color-light-grey;
@@ -59,11 +62,25 @@ $color-dark-grey: #999999;
     }
 
     &__body {
-        padding: 1.25rem 3.4375rem 1.25rem 1.25rem;
 
         position: relative;
 
-        display: none;
+        max-height: 0;
+
+        overflow-y: scroll;
+
+        transition: max-height .5s;
+
+        &::-webkit-scrollbar {
+            background: $scroll-bar-background;
+            border-radius: $boder-radius;
+            
+            width: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $color-green;
+            border: $boder-radius;
+        }
     }
 
     &__text {
@@ -75,6 +92,9 @@ $color-dark-grey: #999999;
         font-size: .9375rem;
 
         line-height: 1.4;
+
+        padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+
     }
 
     &__scrollbar {
@@ -100,7 +120,7 @@ $color-dark-grey: #999999;
         }
 
         .c-accordion-item__body {
-            display: block;
+            max-height: 150px;
         }
     }
 }

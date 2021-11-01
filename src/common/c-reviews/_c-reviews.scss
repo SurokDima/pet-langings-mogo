@@ -4,11 +4,13 @@ $color-grey: #999999;
 $color-red: #f38181;
 $color-light-grey: #cccccc;
 
+$color-grey-bg: #f8f8f8;
 
 $animation-duration: .3s;
 
 .c-reviews {
     
+    background: $color-grey-bg;
     
     &__button {
 
@@ -87,6 +89,7 @@ $animation-duration: .3s;
         font-style: italic;
 
         line-height: 1.4;
+
     }
 
     &__author {

@@ -782,9 +782,19 @@ html {
   cursor: pointer;
 }
 .c-accordion-item__body {
-  padding: 1.25rem 3.4375rem 1.25rem 1.25rem;
   position: relative;
-  display: none;
+  max-height: 0;
+  overflow-y: scroll;
+  transition: max-height 0.5s;
+}
+.c-accordion-item__body::-webkit-scrollbar {
+  background: #f5f5f5;
+  border-radius: 20px;
+  width: 5px;
+}
+.c-accordion-item__body::-webkit-scrollbar-thumb {
+  background: #95e1d3;
+  border: 20px;
 }
 .c-accordion-item__text {
   color: #999999;
@@ -793,6 +803,7 @@ html {
   font-weight: 300;
   font-size: 0.9375rem;
   line-height: 1.4;
+  padding: 1.25rem 1.25rem 1.25rem 1.25rem;
 }
 .c-accordion-item__scrollbar {
   height: 80%;
@@ -809,7 +820,7 @@ html {
   transform: translateY(-50%) rotate(180deg);
 }
 .c-accordion-item--is-active .c-accordion-item__body {
-  display: block;
+  max-height: 150px;
 }
 
 .o-scrollbar {
@@ -860,6 +871,9 @@ html {
   transform: scale(1.1) rotate(-90deg);
 }
 
+.c-reviews {
+  background: #f8f8f8;
+}
 .c-reviews__button {
   position: absolute;
   top: 50%;
