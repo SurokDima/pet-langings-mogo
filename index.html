@@ -1,63 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+    <!-- Link Swiper styles -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- Link Swiper scripts -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <script src="https://kit.fontawesome.com/f868e4e8fe.js" crossorigin="anonymous"></script>
 
+    <script src="./src/functions.js" defer></script>
+    <script src="./src/common/c-header/c-header.js" defer></script>
+    <script src="./src/common/c-reviews/c-reviews.js" defer></script>
+
+
     <title>Mogo</title>
 </head>
+
 <body>
     <div class="l-wrapper">
-        <header class="c-header l-wrapper__header">
-            <div class="l-container">
+        <header class="c-header js-header l-wrapper__header" data-target="about">
+            <div class="l-container c-header__container">
                 <div class="c-header__inner">
-                    <div class="c-header__logo">
-                        MoGo
+                    <div class="c-header__adaptive-block">
+                        <div class="c-header__logo">
+                            MoGo
+                        </div>
+                        <button class="c-header__button js-header__button">
+                            <i class="fas fa-bars"></i>
+                        </button>
                     </div>
-        
+
                     <nav class="c-nav c-header__nav">
                         <ul class="c-nav__list">
                             <li class="c-nav__item">
-                                <a href="#" class="c-nav__link">
+                                <a href="#" class="c-nav__link js-scroll" data-scroll-to="about">
                                     About
                                 </a>
                             </li>
-    
+
                             <li class="c-nav__item">
-                                <a href="#" class="c-nav__link">
+                                <a href="#" class="c-nav__link js-scroll" data-scroll-to="service">
                                     Service
                                 </a>
                             </li>
-    
+
                             <li class="c-nav__item">
-                                <a href="#" class="c-nav__link">
+                                <a href="#" class="c-nav__link js-scroll" data-scroll-to="work">
                                     Work
                                 </a>
                             </li>
-    
+
                             <li class="c-nav__item">
-                                <a href="#" class="c-nav__link">
+                                <a href="#" class="c-nav__link js-scroll" data-scroll-to="blog">
                                     Blog
                                 </a>
                             </li>
-    
+
                             <li class="c-nav__item">
-                                <a href="#" class="c-nav__link">
+                                <a href="#" class="c-nav__link js-scroll" data-scroll-to="contact">
                                     Contact
                                 </a>
                             </li>
-    
+
                             <li class="c-nav__item">
                                 <a href="#" class="c-nav__link c-nav__link--icon-link">
                                     <i class="fas fa-shopping-cart"></i>
                                 </a>
                             </li>
-    
+
                             <li class="c-nav__item">
                                 <a href="#" class="c-nav__link c-nav__link--icon-link">
                                     <i class="fas fa-search"></i>
@@ -65,19 +84,20 @@
                             </li>
                         </ul> <!-- ul.c-nav__list -->
                     </nav> <!-- nav.c-nav -->
+
                 </div> <!-- c-header__inner -->
             </div> <!-- .l-container -->
         </header> <!-- header.c-header -->
-    
-        <section class="c-intro">
+
+        <section class="c-intro js-slider">
             <div class="l-container">
-            
+
                 <div class="c-intro__message">
 
                     <h2 class="c-intro__suptitle">
                         Creative Template
                     </h2>
-    
+
                     <h1 class="c-intro__title">
                         Welcome to MoGo
                     </h1>
@@ -107,7 +127,7 @@
                                 </span>
                             </div>
                         </div>
-                        
+
                         <div class="c-slider-info__item">
                             <div class="c-slider-info__progress-background">
                                 <div class="c-slider-info__progress"></div>
@@ -122,10 +142,10 @@
                             </div>
                         </div>
 
-                        
-                        <div class="c-slider-info__item">
+
+                        <div class="c-slider-info__item js-slider-info-item" data-slider-number="3">
                             <div class="c-slider-info__progress-background">
-                                <div class="c-slider-info__progress"></div>
+                                <div class="c-slider-info__progress js-slider-info-progress"></div>
                             </div>
                             <div class="c-slider-info__title">
                                 <span class="c-slider-info__number">
@@ -137,10 +157,10 @@
                             </div>
                         </div>
 
-                        
-                        <div class="c-slider-info__item">
+
+                        <div class="c-slider-info__item js-slider-info-item" data-slider-number="4">
                             <div class="c-slider-info__progress-background">
-                                <div class="c-slider-info__progress"></div>
+                                <div class="c-slider-info__progress js-slider-info-progress"></div>
                             </div>
                             <div class="c-slider-info__title">
                                 <span class="c-slider-info__number">
@@ -158,7 +178,7 @@
             </div> <!-- .c-slider-info -->
         </section> <!-- section.c-intro -->
 
-        <section class="c-section c-about">
+        <section class="c-section c-about" data-scroll-target="about" data-menu-target="about">
             <div class="l-container">
                 <div class="c-about__inner">
                     <div class="c-section-message c-about__message c-section__message">
@@ -168,21 +188,23 @@
                         <h1 class="c-section-message__title">
                             Story about us
                         </h1>
-    
+
                         <div class="c-section-message__text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
                         </div>
                     </div>
-    
-    
+
+
                     <div class="c-about__list">
-    
+
                         <div class="c-image-card c-about__item">
                             <div class="c-image-card__inner">
                                 <div class="c-image-card__image-container">
                                     <img class="c-image-card__image" src="./assets/images/about/about-1.jpg" alt="">
                                 </div>
-    
+
                                 <div class="c-image-card__title">
                                     <div class="c-image-card__icon">
                                         <i class="fas fa-user-friends"></i>
@@ -191,16 +213,16 @@
                                         Super Team
                                     </div>
                                 </div>
-    
+
                             </div>
                         </div>
-    
+
                         <div class="c-image-card c-about__item">
                             <div class="c-image-card__inner">
                                 <div class="c-image-card__image-container">
                                     <img class="c-image-card__image" src="./assets/images/about/about-2.jpg" alt="">
                                 </div>
-    
+
                                 <div class="c-image-card__title">
                                     <div class="c-image-card__icon">
                                         <i class="fas fa-user-friends"></i>
@@ -209,16 +231,16 @@
                                         Super Team
                                     </div>
                                 </div>
-    
+
                             </div>
                         </div>
-    
+
                         <div class="c-image-card c-about__item">
                             <div class="c-image-card__inner">
                                 <div class="c-image-card__image-container">
                                     <img class="c-image-card__image" src="./assets/images/about/about-3.jpg" alt="">
                                 </div>
-    
+
                                 <div class="c-image-card__title">
                                     <div class="c-image-card__icon">
                                         <i class="fas fa-user-friends"></i>
@@ -227,20 +249,20 @@
                                         Super Team
                                     </div>
                                 </div>
-    
+
                             </div>
                         </div>
-    
+
                     </div> <!-- .c-about__list -->
-    
+
                 </div> <!-- .c-about__inner -->
             </div> <!-- .l-container -->
         </section> <!-- section.c-about -->
-    
+
         <div class="c-stats">
             <div class="l-container">
                 <div class="c-stats__inner">
-                    
+
                     <div class="c-stats__item">
 
                         <div class="c-stats__number">
@@ -307,7 +329,7 @@
             </div> <!-- .l-container -->
         </div> <!-- .c-stats -->
 
-        <section class="c-section c-service">
+        <section class="c-section c-service" data-scroll-target="service">
             <div class="l-container">
 
                 <div class="c-service__inner">
@@ -326,7 +348,8 @@
                         <div class="c-service__row">
                             <div class="c-service-item c-service__item">
                                 <div class="c-service-item__image-container">
-                                    <img class="c-service-item__image" src="./assets/images/service/photography.png" alt="">
+                                    <img class="c-service-item__image" src="./assets/images/service/photography.png"
+                                        alt="">
                                 </div>
                                 <div class="c-service-item__message">
                                     <div class="c-service-item__title">
@@ -337,10 +360,11 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="c-service-item c-service__item">
                                 <div class="c-service-item__image-container">
-                                    <img class="c-service-item__image" src="./assets/images/service/webdesign.png" alt="">
+                                    <img class="c-service-item__image" src="./assets/images/service/webdesign.png"
+                                        alt="">
                                 </div>
                                 <div class="c-service-item__message">
                                     <div class="c-service-item__title">
@@ -351,10 +375,11 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="c-service-item c-service__item">
                                 <div class="c-service-item__image-container">
-                                    <img class="c-service-item__image" src="./assets/images/service/creativity.png" alt="">
+                                    <img class="c-service-item__image" src="./assets/images/service/creativity.png"
+                                        alt="">
                                 </div>
                                 <div class="c-service-item__message">
                                     <div class="c-service-item__title">
@@ -381,10 +406,11 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="c-service-item c-service__item">
                                 <div class="c-service-item__image-container">
-                                    <img class="c-service-item__image" src="./assets/images/service/css-html.png" alt="">
+                                    <img class="c-service-item__image" src="./assets/images/service/css-html.png"
+                                        alt="">
                                 </div>
                                 <div class="c-service-item__message">
                                     <div class="c-service-item__title">
@@ -395,7 +421,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="c-service-item c-service__item">
                                 <div class="c-service-item__image-container">
                                     <img class="c-service-item__image" src="./assets/images/service/digital.png" alt="">
@@ -435,7 +461,9 @@
                     <div class="c-devices__devices">
                         <div class="c-devices__images-container">
                             <img src="./assets/images/devices/devices-ipad.png" alt="" class="c-devices__ipad">
-                            <img src="./assets/images/devices/devices-iphone.png" alt="" class="c-devices__iphone">
+                            <div class="c-devices__iphone-container">
+                                <img src="./assets/images/devices/devices-iphone.png" alt="" class="c-devices__iphone">
+                            </div>
                         </div>
                     </div>
 
@@ -464,13 +492,15 @@
 
                     <div class="c-service-info__container">
                         <div class="c-service-info__image-container">
-                            <img src="./assets/images/service-info/service-info-img.jpg" alt="" class="c-service-info__image">
+                            <img src="./assets/images/service-info/service-info-img.jpg" alt=""
+                                class="c-service-info__image">
                         </div>
                         <div class="c-service-info__accordion-container">
                             <div class="c-accordion-item c-accordion-item--is-active c-service-info__accordion-item">
                                 <div class="c-accordion-item__header">
                                     <div class="c-accordion-item__icon-container">
-                                        <img src="./assets/images/service/photography.png" alt="" class="c-accordion-item__img">
+                                        <img src="./assets/images/service/photography.png" alt=""
+                                            class="c-accordion-item__img">
                                     </div>
 
                                     <div class="c-accordion-item__title">
@@ -483,10 +513,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="c-accordion-item__body">
                                     <div class="c-accordion-item__text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni qui et modi numquam ipsam! Veniam sapiente repudiandae excepturi debitis, delectus modi aut autem dolorum, voluptatem quasi, quisquam unde iste.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni qui
+                                        et modi numquam ipsam! Veniam sapiente repudiandae excepturi debitis, delectus
+                                        modi aut autem dolorum, voluptatem quasi, quisquam unde iste.
                                     </div>
                                     <div class="o-scrollbar c-accordion-item__scrollbar">
                                         <div class="o-scrollbar__tumb"></div>
@@ -497,7 +529,8 @@
                             <div class="c-accordion-item c-service-info__accordion-item">
                                 <div class="c-accordion-item__header">
                                     <div class="c-accordion-item__icon-container">
-                                        <img src="./assets/images/service/webdesign.png" alt="" class="c-accordion-item__img">
+                                        <img src="./assets/images/service/webdesign.png" alt=""
+                                            class="c-accordion-item__img">
                                     </div>
 
                                     <div class="c-accordion-item__title">
@@ -510,10 +543,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="c-accordion-item__body">
                                     <div class="c-accordion-item__text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni qui et modi numquam ipsam! Veniam sapiente repudiandae excepturi debitis, delectus modi aut autem dolorum, voluptatem quasi, quisquam unde iste.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni qui
+                                        et modi numquam ipsam! Veniam sapiente repudiandae excepturi debitis, delectus
+                                        modi aut autem dolorum, voluptatem quasi, quisquam unde iste.
                                     </div>
                                     <div class="o-scrollbar c-accordion-item__scrollbar">
                                         <div class="o-scrollbar__tumb"></div>
@@ -524,7 +559,8 @@
                             <div class="c-accordion-item c-service-info__accordion-item">
                                 <div class="c-accordion-item__header">
                                     <div class="c-accordion-item__icon-container">
-                                        <img src="./assets/images/service/creativity.png" alt="" class="c-accordion-item__img">
+                                        <img src="./assets/images/service/creativity.png" alt=""
+                                            class="c-accordion-item__img">
                                     </div>
 
                                     <div class="c-accordion-item__title">
@@ -537,10 +573,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="c-accordion-item__body">
                                     <div class="c-accordion-item__text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni qui et modi numquam ipsam! Veniam sapiente repudiandae excepturi debitis, delectus modi aut autem dolorum, voluptatem quasi, quisquam unde iste.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni qui
+                                        et modi numquam ipsam! Veniam sapiente repudiandae excepturi debitis, delectus
+                                        modi aut autem dolorum, voluptatem quasi, quisquam unde iste.
                                     </div>
                                     <div class="o-scrollbar c-accordion-item__scrollbar">
                                         <div class="o-scrollbar__tumb"></div>
@@ -557,7 +595,9 @@
 
         <div class="c-section c-reviews">
             <div class="l-container">
-                <div class="c-reviews__inner">
+
+                <div class="c-reviews__inner js-swiper">
+
                     <a class="c-reviews__button c-reviews__button--prev o-arrow o-arrow--left o-arrow--large">
                         <div class="o-arrow__icon">
                             <i class="fas fa-chevron-right"></i>
@@ -569,22 +609,46 @@
                         </div>
                     </a>
 
-                    <div class="c-reviews__item">
-                        <div class="c-reviews__avatar-container">
-                            <img src="./assets/images/reviews/reviews-avatar.png" alt="" class="c-reviews__avatar">
-                        </div>
-                        <div class="c-reviews__item-content">
-                            <div class="c-reviews__item-text">
-                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide c-reviews__item">
+                            <div class="c-reviews__avatar-container">
+                                <img src="./assets/images/reviews/reviews-avatar.png" alt=""
+                                    class="c-reviews__avatar">
                             </div>
-                            <div class="c-reviews__author">
-                                Jon Doe
+                            <div class="swiper-slide c-reviews__item-content">
+                                <div class="c-reviews__item-text">
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation.”
+                                </div>
+                                <div class="c-reviews__author">
+                                    Jon Doe
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide c-reviews__item">
+                            <div class="c-reviews__avatar-container">
+                                <img src="./assets/images/reviews/reviews-avatar.png" alt=""
+                                    class="c-reviews__avatar">
+                            </div>
+                            <div class="c-reviews__item-content">
+                                <div class="c-reviews__item-text">
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation.”
+                                </div>
+                                <div class="c-reviews__author">
+                                    Jon Doe 1
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div> <!-- .c-reviews__inner -->
             </div> <!-- .l-container -->
         </div> <!-- .c-reviews -->
+
 
         <section class="c-section c-team">
             <div class="l-container">
@@ -607,7 +671,7 @@
                                 <div class="c-image-card__image-container">
                                     <img class="c-image-card__image" src="./assets/images/team/team-1.jpg" alt="">
                                 </div>
-    
+
                                 <div class="c-image-card__title">
                                     <div class="c-image-card__socials">
                                         <div class="c-image-card__social-item">
@@ -624,7 +688,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                             </div>
                         </div>
 
@@ -633,7 +697,7 @@
                                 <div class="c-image-card__image-container">
                                     <img class="c-image-card__image" src="./assets/images/team/team-2.jpg" alt="">
                                 </div>
-    
+
                                 <div class="c-image-card__title">
                                     <div class="c-image-card__socials">
                                         <div class="c-image-card__social-item">
@@ -650,7 +714,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                             </div>
                         </div>
 
@@ -659,7 +723,7 @@
                                 <div class="c-image-card__image-container">
                                     <img class="c-image-card__image" src="./assets/images/team/team-3.jpg" alt="">
                                 </div>
-    
+
                                 <div class="c-image-card__title">
                                     <div class="c-image-card__socials">
                                         <div class="c-image-card__social-item">
@@ -676,7 +740,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                             </div>
                         </div>
 
@@ -711,7 +775,7 @@
             </div> <!-- .l-container -->
         </div> <!-- .c-logos -->
 
-        <section class="c-section c-work">
+        <section class="c-section c-work" data-scroll-target="work">
             <div class="c-work__inner">
                 <div class="c-section-message c-section__message c-work__message">
                     <div class="c-section-message__suptitle">
@@ -729,7 +793,7 @@
                                 <div class="c-image-card__image-container">
                                     <img class="c-image-card__image" src="./assets/images/work/1.jpg" alt="">
                                 </div>
-    
+
                                 <div class="c-image-card__title">
                                     <div class="c-image-card__icon">
                                         <i class="fas fa-user-friends"></i>
@@ -746,7 +810,7 @@
                                 <div class="c-image-card__image-container">
                                     <img class="c-image-card__image" src="./assets/images/work/2.jpg" alt="">
                                 </div>
-    
+
                                 <div class="c-image-card__title">
                                     <div class="c-image-card__icon">
                                         <i class="fas fa-user-friends"></i>
@@ -756,7 +820,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>  
+                        </div>
 
                     </div>
 
@@ -767,7 +831,7 @@
                                 <div class="c-image-card__image-container">
                                     <img class="c-image-card__image" src="./assets/images/work/3.jpg" alt="">
                                 </div>
-    
+
                                 <div class="c-image-card__title">
                                     <div class="c-image-card__icon">
                                         <i class="fas fa-user-friends"></i>
@@ -784,7 +848,7 @@
                                 <div class="c-image-card__image-container">
                                     <img class="c-image-card__image" src="./assets/images/work/4.jpg" alt="">
                                 </div>
-    
+
                                 <div class="c-image-card__title">
                                     <div class="c-image-card__icon">
                                         <i class="fas fa-user-friends"></i>
@@ -794,7 +858,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>  
+                        </div>
 
                     </div>
 
@@ -805,7 +869,7 @@
                                 <div class="c-image-card__image-container">
                                     <img class="c-image-card__image" src="./assets/images/work/5.jpg" alt="">
                                 </div>
-    
+
                                 <div class="c-image-card__title">
                                     <div class="c-image-card__icon">
                                         <i class="fas fa-user-friends"></i>
@@ -826,7 +890,7 @@
                                 <div class="c-image-card__image-container">
                                     <img class="c-image-card__image" src="./assets/images/work/6.jpg" alt="">
                                 </div>
-    
+
                                 <div class="c-image-card__title">
                                     <div class="c-image-card__icon">
                                         <i class="fas fa-user-friends"></i>
@@ -843,7 +907,7 @@
                                 <div class="c-image-card__image-container">
                                     <img class="c-image-card__image" src="./assets/images/work/7.jpg" alt="">
                                 </div>
-    
+
                                 <div class="c-image-card__title">
                                     <div class="c-image-card__icon">
                                         <i class="fas fa-user-friends"></i>
@@ -853,7 +917,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>  
+                        </div>
 
                     </div>
 
@@ -864,7 +928,9 @@
 
         <div class="c-section c-reviews">
             <div class="l-container">
-                <div class="c-reviews__inner">
+
+                <div class="c-reviews__inner js-swiper">
+
                     <a class="c-reviews__button c-reviews__button--prev o-arrow o-arrow--left o-arrow--large">
                         <div class="o-arrow__icon">
                             <i class="fas fa-chevron-right"></i>
@@ -876,22 +942,44 @@
                         </div>
                     </a>
 
-                    <div class="c-reviews__item">
-                        <div class="c-reviews__avatar-container">
-                            <img src="./assets/images/reviews/reviews-avatar.png" alt="" class="c-reviews__avatar">
-                        </div>
-                        <div class="c-reviews__item-content">
-                            <div class="c-reviews__item-text">
-                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide c-reviews__item">
+                            <div class="c-reviews__avatar-container">
+                                <img src="./assets/images/reviews/reviews-avatar.png" alt=""
+                                    class="c-reviews__avatar">
                             </div>
-                            <div class="c-reviews__author">
-                                Jon Doe
+                            <div class="swiper-slide c-reviews__item-content">
+                                <div class="c-reviews__item-text">
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation.”
+                                </div>
+                                <div class="c-reviews__author">
+                                    Jon Doe
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide c-reviews__item">
+                            <div class="c-reviews__avatar-container">
+                                <img src="./assets/images/reviews/reviews-avatar.png" alt=""
+                                    class="c-reviews__avatar">
+                            </div>
+                            <div class="c-reviews__item-content">
+                                <div class="c-reviews__item-text">
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation.”
+                                </div>
+                                <div class="c-reviews__author">
+                                    Jon Doe 1
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div> <!-- .c-reviews__inner -->
             </div> <!-- .l-container -->
-     
         </div> <!-- .c-reviews -->
 
         <section class="c-section c-clients">
@@ -906,7 +994,7 @@
                         </h1>
                     </div>
 
-                    <div class="c-clients__list">   
+                    <div class="c-clients__list">
 
                         <div class="c-clients__row">
 
@@ -926,7 +1014,9 @@
                                     </div>
 
                                     <div class="c-clients__comment">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nemo aperiam consequuntur autem ex maiores repellendus quam impedit atque! Omnis maxime asperiores esse nostrum autem saepe tempora vitae fugiat impedit.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nemo aperiam
+                                        consequuntur autem ex maiores repellendus quam impedit atque! Omnis maxime
+                                        asperiores esse nostrum autem saepe tempora vitae fugiat impedit.
                                     </div>
                                 </div>
 
@@ -948,7 +1038,9 @@
                                     </div>
 
                                     <div class="c-clients__comment">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nemo aperiam consequuntur autem ex maiores repellendus quam impedit atque! Omnis maxime asperiores esse nostrum autem saepe tempora vitae fugiat impedit.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nemo aperiam
+                                        consequuntur autem ex maiores repellendus quam impedit atque! Omnis maxime
+                                        asperiores esse nostrum autem saepe tempora vitae fugiat impedit.
                                     </div>
                                 </div>
 
@@ -966,7 +1058,7 @@
                                 <div class="c-clients__item-text">
                                     <div class="c-clients__info">
                                         <div class="c-clients__name">
-                                            Jaelynn Castillo 
+                                            Jaelynn Castillo
                                         </div>
                                         <div class="c-clients__job">
                                             Graphic design
@@ -974,7 +1066,9 @@
                                     </div>
 
                                     <div class="c-clients__comment">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nemo aperiam consequuntur autem ex maiores repellendus quam impedit atque! Omnis maxime asperiores esse nostrum autem saepe tempora vitae fugiat impedit.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nemo aperiam
+                                        consequuntur autem ex maiores repellendus quam impedit atque! Omnis maxime
+                                        asperiores esse nostrum autem saepe tempora vitae fugiat impedit.
                                     </div>
                                 </div>
 
@@ -996,11 +1090,13 @@
                                     </div>
 
                                     <div class="c-clients__comment">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nemo aperiam consequuntur autem ex maiores repellendus quam impedit atque! Omnis maxime asperiores esse nostrum autem saepe tempora vitae fugiat impedit.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nemo aperiam
+                                        consequuntur autem ex maiores repellendus quam impedit atque! Omnis maxime
+                                        asperiores esse nostrum autem saepe tempora vitae fugiat impedit.
                                     </div>
                                 </div>
 
-                                
+
 
                             </div>
 
@@ -1014,10 +1110,10 @@
             </div> <!-- .l-container -->
         </section> <!-- section.c-clients -->
 
-        <section class="c-section c-blog">
+        <section class="c-section c-blog" data-scroll-target="blog">
             <div class="l-container">
                 <div class="c-blog__inner">
-                    
+
                     <div class="c-section-message c-section__message">
 
                         <h2 class="c-section-message__suptitle">
@@ -1045,7 +1141,7 @@
                                         Jan
                                     </div>
                                 </div>
-                                
+
                             </div>
 
                             <div class="c-blog__content">
@@ -1053,7 +1149,8 @@
                                     Lorem ipsum dolor sit amet
                                 </a>
                                 <div class="c-blog__text">
-                                    Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna aliqua.
                                 </div>
                             </div>
 
@@ -1092,7 +1189,7 @@
                                         Jan
                                     </div>
                                 </div>
-                                
+
                             </div>
 
                             <div class="c-blog__content">
@@ -1100,7 +1197,8 @@
                                     Lorem ipsum dolor sit amet
                                 </a>
                                 <div class="c-blog__text">
-                                    Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna aliqua.
                                 </div>
                             </div>
 
@@ -1139,7 +1237,7 @@
                                         Jan
                                     </div>
                                 </div>
-                                
+
                             </div>
 
                             <div class="c-blog__content">
@@ -1147,7 +1245,8 @@
                                     Lorem ipsum dolor sit amet
                                 </a>
                                 <div class="c-blog__text">
-                                    Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna aliqua.
                                 </div>
                             </div>
 
@@ -1186,7 +1285,7 @@
             </h2>
         </section>
 
-        <footer class="c-footer">
+        <footer class="c-footer" data-scroll-target="contact">
             <div class="l-container">
                 <div class="c-footer__inner">
                     <div class="c-footer__info">
@@ -1195,7 +1294,9 @@
                                 MoGo
                             </div>
                             <div class="c-footer__info-text">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur temporibus, accusantium modi quo corrupti praesentium magnam ullam voluptate sint, unde qui rerum asperiores? Alias deserunt debitis asperiores necessitatibus obcaecati numquam?
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur temporibus,
+                                accusantium modi quo corrupti praesentium magnam ullam voluptate sint, unde qui rerum
+                                asperiores? Alias deserunt debitis asperiores necessitatibus obcaecati numquam?
                             </div>
                         </div>
                         <div class="c-footer__followers">
@@ -1244,7 +1345,8 @@
                         <div class="c-footer-blogs__list">
                             <div class="c-footer-blogs__item">
                                 <div class="c-footer-blogs__image-container">
-                                    <img src="./assets/images/footer/blogs/foooter-blogs-1.png" class="c-footer-blogs__image"></img>
+                                    <img src="./assets/images/footer/blogs/foooter-blogs-1.png"
+                                        class="c-footer-blogs__image"></img>
                                 </div>
                                 <div class="c-footer-blogs__content">
                                     <a class="c-footer-blogs__item-title">
@@ -1257,7 +1359,8 @@
                             </div>
                             <div class="c-footer-blogs__item">
                                 <div class="c-footer-blogs__image-container">
-                                    <img src="./assets/images/footer/blogs/footer-blogs-2.png" class="c-footer-blogs__image"></img>
+                                    <img src="./assets/images/footer/blogs/footer-blogs-2.png"
+                                        class="c-footer-blogs__image"></img>
                                 </div>
                                 <div class="c-footer-blogs__content">
                                     <a class="c-footer-blogs__item-title">
@@ -1270,7 +1373,8 @@
                             </div>
                             <div class="c-footer-blogs__item">
                                 <div class="c-footer-blogs__image-container">
-                                    <img src="./assets/images/footer/blogs/footer-blogs-3.png" class="c-footer-blogs__image"></img>
+                                    <img src="./assets/images/footer/blogs/footer-blogs-3.png"
+                                        class="c-footer-blogs__image"></img>
                                 </div>
                                 <div class="c-footer-blogs__content">
                                     <a class="c-footer-blogs__item-title">
@@ -1291,31 +1395,40 @@
                         <div class="c-footer-instagram__content">
                             <div class="c-footer-instagram__list">
                                 <div class="c-footer-instagram__item">
-                                    <img src="./assets/images/footer/instagram/footer-instagram-1.jpg" alt="" class="c-footer-instagram__item-image">
+                                    <img src="./assets/images/footer/instagram/footer-instagram-1.jpg" alt=""
+                                        class="c-footer-instagram__item-image">
                                 </div>
                                 <div class="c-footer-instagram__item">
-                                    <img src="./assets/images/footer/instagram/footer-instagram-2.jpg" alt="" class="c-footer-instagram__item-image">
+                                    <img src="./assets/images/footer/instagram/footer-instagram-2.jpg" alt=""
+                                        class="c-footer-instagram__item-image">
                                 </div>
                                 <div class="c-footer-instagram__item">
-                                    <img src="./assets/images/footer/instagram/footer-instagram-3.jpg" alt="" class="c-footer-instagram__item-image">
+                                    <img src="./assets/images/footer/instagram/footer-instagram-3.jpg" alt=""
+                                        class="c-footer-instagram__item-image">
                                 </div>
                                 <div class="c-footer-instagram__item">
-                                    <img src="./assets/images/footer/instagram/footer-instagram-4.jpg" alt="" class="c-footer-instagram__item-image">
+                                    <img src="./assets/images/footer/instagram/footer-instagram-4.jpg" alt=""
+                                        class="c-footer-instagram__item-image">
                                 </div>
                                 <div class="c-footer-instagram__item">
-                                    <img src="./assets/images/footer/instagram/footer-instagram-5.jpg" alt="" class="c-footer-instagram__item-image">
+                                    <img src="./assets/images/footer/instagram/footer-instagram-5.jpg" alt=""
+                                        class="c-footer-instagram__item-image">
                                 </div>
                                 <div class="c-footer-instagram__item">
-                                    <img src="./assets/images/footer/instagram/footer-instagram-6.jpg" alt="" class="c-footer-instagram__item-image">
+                                    <img src="./assets/images/footer/instagram/footer-instagram-6.jpg" alt=""
+                                        class="c-footer-instagram__item-image">
                                 </div>
                                 <div class="c-footer-instagram__item">
-                                    <img src="./assets/images/footer/instagram/footer-instagram-7.jpg" alt="" class="c-footer-instagram__item-image">
+                                    <img src="./assets/images/footer/instagram/footer-instagram-7.jpg" alt=""
+                                        class="c-footer-instagram__item-image">
                                 </div>
                                 <div class="c-footer-instagram__item">
-                                    <img src="./assets/images/footer/instagram/footer-instagram-8.jpg" alt="" class="c-footer-instagram__item-image">
+                                    <img src="./assets/images/footer/instagram/footer-instagram-8.jpg" alt=""
+                                        class="c-footer-instagram__item-image">
                                 </div>
                                 <div class="c-footer-instagram__item">
-                                    <img src="./assets/images/footer/instagram/footer-instagram-9.jpg" alt="" class="c-footer-instagram__item-image">
+                                    <img src="./assets/images/footer/instagram/footer-instagram-9.jpg" alt=""
+                                        class="c-footer-instagram__item-image">
                                 </div>
                             </div>
                             <a class="c-footer-instagram__more">
@@ -1328,8 +1441,9 @@
         </footer> <!-- footer.c-footer -->
 
     </div> <!-- .l-wrapper -->
-    
-    
-    
+
+
+
 </body>
+
 </html>

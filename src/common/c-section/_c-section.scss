@@ -8,6 +8,14 @@
     &--no-botton-padding {
         padding-bottom: 0;
     }
+
+    @media (max-width: 601px) {
+        padding: 70px 0;
+
+        &--no-botton-padding {
+            padding-bottom: 0;
+        }
+    }
 }
 
 

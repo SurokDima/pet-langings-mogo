@@ -24,6 +24,10 @@ $color-red: #f38181;
 
         &--is-active {
             opacity: 1;
+
+            .c-slider-info__progress {
+                width: 35%;
+            }
         }
     }
 

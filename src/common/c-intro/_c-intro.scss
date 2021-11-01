@@ -16,6 +16,7 @@ $color-white: #fff;
 
     background: url("../images/intro/intro-background.jpg");
     background-size: cover;
+    background-position: center;
 
     &__message {
         display: flex;
@@ -23,6 +24,7 @@ $color-white: #fff;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
     }
 
     &__title {
